@@ -1,0 +1,510 @@
+/* src/App.css */
+
+/* General */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+h2, h3, h4 {
+  color: #111827;
+}
+
+/* Poll Container */
+.poll-box {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Question */
+.poll-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* Option Row */
+.poll-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: background 0.2s ease;
+}
+
+.poll-option:hover {
+  background-color: #f3f4f6;
+}
+
+/* Option Number */
+.poll-number {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  border-radius: 50%;
+  background-color: #ede9fe;
+  color: #6d28d9;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Option Content */
+.poll-content {
+  flex: 1;
+}
+
+/* Option Text + Percent */
+.poll-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* Progress Bar */
+.poll-bar {
+  width: 100%;
+  height: 14px;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.poll-bar-fill {
+  height: 100%;
+  background-color: #6366f1;
+  border-radius: 6px 0 0 6px;
+  transition: width 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #6366f1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4f46e5;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+/* General Landing Page */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+}
+
+/* Badge */
+.badge {
+  background: #ede9fe;
+  color: #4f46e5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.landing-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.landing-title span {
+  font-weight: 700;
+}
+
+/* Subtitle */
+.landing-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  max-width: 420px;
+}
+
+/* Role Cards */
+.role-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.role-card {
+  flex: 1;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  max-width: 200px;
+}
+
+.role-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.role-card p {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.role-card:hover {
+  border-color: #6366f1;
+}
+
+.role-card.active {
+  border: 2px solid #6366f1;
+  background: #f5f3ff;
+}
+
+/* Continue Button */
+.continue-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.continue-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.teacher-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: "Inter", sans-serif;
+}
+
+.badge {
+  background: #ede9fe;
+  color: #4f46e5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.teacher-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.teacher-title span {
+  font-weight: 700;
+}
+.teacher-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.question-section {
+  /* margin-bottom: 30px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.question-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+
+.question-input {
+  flex: 1;
+  min-height: 100px;
+  padding: 12px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.question-input:focus {
+  outline: 2px solid #6366f1;
+}
+
+.timer-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  width: 150px;
+}
+.question-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #6b7280;
+  /* margin-top: 4px; */
+}
+
+.options-section {
+  margin-bottom: 40px;
+}
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.option-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.option-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+.option-input:focus {
+  outline: 2px solid #6366f1;
+}
+
+.correct-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.add-option-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  color: #7c3aed;
+  background: transparent;
+  font-weight: 500;
+  cursor: pointer;
+}
+.add-option-btn:hover {
+  background: #f5f3ff;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+}
+
+.ask-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: #fff;
+  cursor: pointer;
+}
+.ask-btn:hover {
+  opacity: 0.9;
+}
+
+.student-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.badge {
+  background: #ede9fe;
+  color: #4f46e5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.student-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.student-title span {
+  font-weight: 700;
+}
+.student-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.label {
+  text-align: left;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.student-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #f3f4f6;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.student-input:focus {
+  outline: 2px solid #6366f1;
+}
+
+.continue-btn {
+  width: 10%;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: #fff;
+  cursor: pointer;
+}
+.continue-btn:hover {
+  opacity: 0.9;
+}
+
+/* Poll state */
+.student-poll {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+.poll-question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.poll-option {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.poll-option:hover {
+  background: #f5f3ff;
+}
+
+.results {
+  margin-top: 20px;
+}
+.results-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.waiting {
+  text-align: center;
+  margin-top: 50px;
+  color: #6b7280;
+}
+
+
+
+.name-input{
+  height: 50px;
+  width: 300px;
+  border: none;
+  background-color: #bfbfd2;
+  margin-bottom: 10px;
+  
+}
+.landing-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  
+}
