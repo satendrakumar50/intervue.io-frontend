@@ -1,7 +1,7 @@
 
 import { io } from "socket.io-client";
 
-const socket = io("https://intervue-io-5.onrender.com");
+const socket = io("https://intervue-io-6.onrender.com/");
 
 export default socket;
 
