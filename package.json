@@ -1,16 +1,19 @@
 {
-  "name": "intervue-frontend",
+  "name": "intervue-backend",
   "version": "1.0.0",
-  "private": true,
+  "description": "Backend server for Intervue.io live polling",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "5.0.1"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.8.1"
   }
 }
+
+
